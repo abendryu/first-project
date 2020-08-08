@@ -1,0 +1,59 @@
+footer{
+    background-color: #34547A;
+}
+.container {
+}
+.footer-row {
+    @include flexbox();
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.footer-row-columns {
+    font-family: Roboto;
+    color: #FFFFFF;
+   
+
+		&__copyright {
+            font-weight: normal;
+            font-size: 13px;
+            line-height: 21px;
+            
+        }
+
+        &__name {
+            font-weight: 500;
+            font-size: 21px;
+            line-height: 25px;
+            margin-bottom: 20px;
+
+
+                &:hover{
+                    text-decoration: underline;
+                }
+                & a:visited {
+                    color: #FFFFFF;
+                }
+        }
+             
+
+}
+
+
+
+.footer-row-social {
+}
+.footer-row-social-list {
+    @include flexbox ();
+
+		&__link {
+            max-width: 43px;
+            max-height: 22px;
+            margin-left: 21px;
+		}
+}
+
+//====================================================================================================
+
+//====================================================================================================
+

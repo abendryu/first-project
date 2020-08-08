@@ -1,0 +1,523 @@
+//<МИКСИНЫ>===============================================================================================
+@import "mixins.scss";
+//</МИКСИНЫ>===============================================================================================
+
+//<ШРИФТЫ>===============================================================================================
+
+//<Подключаем шрифты>=======================================================================================
+@import url('https://fonts.googleapis.com/css2?family=Revalia&family=Roboto:wght@400;500&display=swap');
+//</Подключаем шрифты>=======================================================================================
+
+//<Иконочные шрифты>==========================================================================================
+
+//</Иконочные шрифты>==========================================================================================
+
+//<Шрифт по умолчанию>==========================================================================================
+$fontfamily: "";
+//</Шрифт по умолчанию>==========================================================================================
+
+//</ШРИФТЫ>=======================================================================================================
+
+//<ПЕРЕМЕННЫЕ>===========================================================================================================
+$minwidth: 320px;
+$mw: 1170;
+$md1: $mw + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+//</ПЕРЕМЕННЫЕ>===========================================================================================================
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+@import "null.scss";
+body {
+	color: #000;
+	font-size: 14px;
+	&.lock {
+		overflow: hidden;
+	}
+}
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	&.loaded {
+	}
+}
+//</ОБОЛОЧКА>===========================================================================================================
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+.container {
+	max-width: $mw + px;
+	margin: 0 auto;
+	width: 100%;
+	@media (max-width: $md1+px) {
+		max-width: 970px;
+	}
+	@media (max-width: $md2+px) {
+		max-width: 750px;
+	}
+	@media (max-width: $md3+px) {
+		max-width: none;
+		padding: 0 10px;
+	}
+}
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+@import "forms.scss";
+@import "ui.scss";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+//@import "../../js/fancybox/jquery.fancybox.scss";
+//@import "datepicker.scss";
+//@import "fontawesome.scss";
+//@import "popover.min.scss";
+//@import "baguetteBox.scss";
+//@import "pagging.scss";
+//@import "icons.scss";
+@import "popup.scss";
+@import "header.scss";
+@import "footer.scss";
+@import "home.scss";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+
+//<ОСНОВНОЙ БЛОК>====================================================================================================
+
+//====================================================================================================
+
+//</ОСНОВНОЙ БЛОК>====================================================================================================
+
+
+//<aboutme>=============================
+*{
+	box-sizing: border-box;
+}
+
+.content {
+}
+.container {
+}
+.content-wrapper {
+
+}
+.content-aboutme {
+	font-family: Roboto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+
+		&__title {
+			
+			font-style: normal;
+			font-weight: 500;
+			font-size: 32px;
+			line-height: 37px;
+			color: #000000;
+			padding-top:148px;
+			margin-bottom: 50px;
+			
+
+		}
+
+		&__text {
+			font-style: normal;
+			font-weight: normal;
+			font-size: 16px;
+			line-height: 26px;
+			width: 40%;
+			color: #727272;
+			text-align: center;
+			padding-bottom: 100px;
+			
+		}
+}
+//</aboutme>==============
+.content-wrapper2 {
+	background: #34547A;
+}
+
+.content-myproject {
+	@include flexbox();
+	justify-content: center;
+	padding-left: 9px;
+
+}
+.content-myproject-list {
+	@include flexbox();
+	padding: 100px 0 100px 0px;
+
+		@media (max-width:$md2+px){
+			flex-wrap: wrap;
+			justify-content: space-between;
+			
+		}
+
+		@media (max-width:$md4+px){
+					
+		}
+
+
+		&__link {
+			margin-right: 25px;
+			margin-left: 25px;
+
+				@media (max-width:$md2+px){
+				padding:25px 0px;
+				}
+
+				@media (max-width:$md4+px){
+				
+				}
+		}
+}
+.items {
+	@include flexbox();
+
+	
+}
+.items-img {
+	margin-right: 20px;
+}
+.items-body {
+	font-family: Roboto;
+	font-style: normal;
+	color: #FFFFFF;
+	
+
+	
+
+		&__title {
+			font-weight: 500;
+			font-size: 21px;
+			line-height: 25px;
+			
+
+		}
+
+		&__subtitle {
+			font-weight: normal;
+			font-size: 16px;
+			line-height: 26px;
+			
+		}
+		&__nomargin{
+			font-family: Roboto;
+			font-style: normal;
+			color: #FFFFFF;
+		}
+}
+
+
+
+//====skills
+.content-wrapper3 {
+}
+.container {
+}
+.content-i {
+	@include flexbox();
+	padding-top: 100px;
+
+
+}
+.content-i-skills {
+	font-family: Roboto;
+	font-style: normal;
+	width: 50%;
+	padding-top: 102px;
+	padding-bottom: 101px;
+
+		&__title {
+		
+		font-weight: 500;
+		font-size: 32px;
+		line-height: 37px;
+		color: #000000;
+		margin-bottom: 50px;
+
+		}
+
+		&__level {
+			
+			
+			&__name{
+				
+				font-weight: normal;
+				font-size: 16px;
+				line-height: 26px;
+				color: #727272;
+				margin-bottom: 19.9px;
+			}
+			&__value{
+				
+				img {
+					max-width: 445px;
+					max-height: 4,36px;
+					margin-bottom: 29px;
+				}
+			}
+		}
+}
+
+.content-i-photo {
+	width: 50%;
+		img { 
+			max-height: 450px;
+			max-width: 555px;
+		}
+
+	
+}
+
+//============
+
+.content-wrapper4 {
+}
+.container {
+}
+.content-how {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 100px;
+}
+.content-how-info {
+
+	font-family: Roboto;
+	font-style: normal;
+	width: 50%;
+	margin-bottom: 50px;
+
+		&__title {
+		
+			font-weight: 500;
+			font-size: 32px;
+			line-height: 37px;
+			text-align: center;
+			color: #000000;
+			margin-bottom: 50px;
+		}
+
+		&__text {
+			
+			font-weight: normal;
+			font-size: 16px;
+			line-height: 26px;
+			
+			color: #727272;
+			text-align: center;
+			
+		}
+}
+.content-how-video {
+	video{
+		min-width: 1110px;
+		min-height: 600px;
+	}
+}
+
+
+///============gallery
+
+.content-wrapper5 {
+	
+
+
+
+.content-gallery {
+	max-width: 1920px;
+	max-height: 960px;
+}
+}
+
+.content-gallery-list {
+	display: grid;
+	grid-template-columns: repeat(4, 480px);
+	grid-template-rows: repeat(2, 480px);	
+	justify-content: center;
+	
+
+		&__link {
+			a {
+				img {
+					max-width: 100%;
+					max-height: auto;
+					@include transition ();
+					
+
+					&:hover {
+						filter: alpha (Opacity 70);
+						opacity: 0.5;
+					}
+				}
+
+
+			}
+			
+		
+		}
+}
+
+//==========clients
+
+.content-wrapper6 {
+}
+.container {
+
+}
+.content-clients {
+	
+
+
+}
+.content-clients-list {
+	@include flexbox ();
+	justify-content: space-between;
+	padding: 72px 0px 100px 0px;
+
+
+
+		&__link {
+		
+		}
+}
+
+
+
+
+//========
+.content-wrapper7 {
+background-color: #EEEFF1;
+}
+.container {
+}
+.content-want{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+
+.content-want-about {
+	@include flexbox();
+	flex-direction: column;
+	font-family: Roboto;
+	font-style: normal;
+	padding-top: 100px;
+	max-width: 540px;
+	margin-bottom: 65px;
+
+
+		&__title {
+			font-weight: 500;
+			font-size: 32px;
+			line-height: 37px;
+			text-align: center;
+			color: #000000;
+			margin-bottom: 80px;
+		
+	
+		}
+
+		&__text {
+			font-weight: normal;
+			font-size: 16px;
+			line-height: 26px;
+			text-align: center;
+			color: #727272;
+		
+			
+		}
+}
+.content-want-form {
+	
+
+	
+}
+.content-want-form-id {
+	@include flexbox();
+	font-size: 14px;
+	margin-bottom: 20px;
+	max-width: 540px;
+	justify-content: space-between;
+	
+
+&__name {
+
+		input{
+		width: 255px;
+		height: 50px;
+		background-color: #FFFFFF;
+		font-size: 14px;
+		line-height: 23px;
+		color: #5F5D5D;
+		padding-left: 20px;
+		}	
+	}	
+
+&__email {
+
+		input{
+		width: 255px;
+		height: 50px;
+		background-color: #FFFFFF;
+		font-size: 14px;
+		line-height: 23px;
+		color: #5F5D5D;
+		padding-left: 20px;
+
+		}
+}
+
+}
+.content-want-form-sms {
+
+
+		input{
+		width: 540px;
+		height: 175px;
+		background-color: #FFFFFF;
+		margin-bottom: 50px;
+		font-size: 14px;
+		line-height: 23px;
+		color: #5F5D5D;
+		padding-left: 24px;
+		padding-bottom: 140px;
+		}
+}
+
+.content-want-form-button {
+	@include flexbox();
+	margin-bottom: 20px;
+	max-width: 540px;
+	justify-content: center;
+	padding-bottom: 101px;
+
+
+		&__submit{
+			background: #34547A;;
+			font-size: 14px;
+			line-height: 23px;
+			text-align: center;
+			letter-spacing: 0.15em;
+			color: #FFFFFF;
+			text-transform: uppercase;
+			padding: 20px 44px;
+			font-family: Roboto;
+			@include transition();
+
+				&:hover {
+					color: #34547A;
+					background-color: #FFFFFF;
+					font-weight: 700;
+					font-size: 16px;
+					border:3px solid #34547A;
+				}
+		}
+
+}
